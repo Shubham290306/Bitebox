@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html>
+<head>
+    <title>Session Management Demo</title>
+</head>
+<body>
+
+    <!-- Input box -->
+    <input type="text" id="name" placeholder="Enter your name">
+
+    <!-- Save button -->
+    <button onclick="saveData()">Save</button>
+
+    <!-- Show button -->
+    <button onclick="showData()">Show</button>
+
+    <script>
+
+        // Function to save data in session
+        function saveData() {
+
+            // Take value from input box
+            let username = document.getElementById("name").value;
+
+            // Store data in sessionStorage
+            sessionStorage.setItem("user", username);
+
+            console.log("Data Saved");
+        }
+
+        // Function to show stored data
+        function showData() {
+
+            // Get stored data
+            let data = sessionStorage.getItem("user");
+
+            // Show in console
+            console.log(data);
+        }
+
+    </script>
+
+</body>
+</html>
+    
+</body>
+</html>

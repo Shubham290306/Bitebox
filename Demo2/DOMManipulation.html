@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="heading">Hello world</h1>
+        <button onclick="changecolor()">Click here</button><br><br>
+        <button onclick="confirm('Do you know')">Click here</button><br><br>
+        <button onclick=testing()>Call function</button><br>
+    <script>
+        function testing()
+        {
+            var age = prompt("enter your age :")
+            if(age>18)
+            {
+                alert("eligible for dv")
+
+            }else {
+                alert('Not eligible for dv')
+
+            }
+
+        }
+        document.writeln("metion something")
+        
+        function changecolor()
+        {
+            document.getElementById('heading').style.color="red";
+            
+        }
+        const card1=document.createElement("div");
+        card1.style.width="300px";
+        card1.style.height="300px";
+        card1.style.backgroundColor="red";
+        const img=documenet.createElement('img');
+        img.src=""
+        const heading=document.createElement("h1")
+        h1.color="red" //like wise sequnece
+
+        document.body.appendChild(card1);
+    </script>
+</body>
+</html>

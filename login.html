@@ -13,11 +13,11 @@
                     }
 
             nav{
-                background-color: black; */
-                padding: 10px 20px; */
+                background-color: black; 
+                padding: 10px 20px; 
                 height: 60px;
                 overflow: hidden;
-                align-items: center; */
+                align-items: center; 
                 
             }
 
@@ -223,7 +223,8 @@
     </style>
     </head>
     
-<body><img src="image/loginbg.jpg" alt="" class="bodybg">
+<body>
+    <img src="image/loginbg.jpg" alt="" class="bodybg">
     <header>
     <nav> 
         <div class="c1">
@@ -246,16 +247,21 @@
     <section class="authentication">
         <div class="cls-box">
             <h2>Login to BIte <span>Box</span></h2>
-            <form action="" > 
+            <form action="" onsubmit="login(event)"> 
                 <label for="">Email</label>
-                <input type="email" placeholder="Enter Email" required><br><br>
+                <input type="email" placeholder="Enter Email" id="useremail"  required><br><br>
                 <label for="">Password</label>
-                <input type="password" placeholder="Enter password" required><br><br>
-                <button type="submit">Login</button>
+                <input type="password" placeholder="Enter password" id="password" required "> 
+                <span onclick="togglepassword()">
+                <i class="fa-solid fa-eye"></i><br><br>
+                </span>
+                <button type="submit" >Login</button>
             </form>
             <p><a href="signup.html">Forgot password</a></p>
             <p>Don't have an account <a href="signup.html">Signup</a></p>
         </div>
+        <p id="error"></p>
+
     </section>
      <footer class="footer">
 
@@ -330,6 +336,17 @@
     
     
 
-    
+    <script>
+        function togglepassword()
+        {
+            let passwordInput = document.getElementById("password");
+            if (passwordInput.type ==="password"){
+                passwordInput.type="text";
+            }else{
+                passwordInput.type="password";
+            }
+        }
+
+    </script>
 </body>
 </html>
